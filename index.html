@@ -1,53 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Hotline Service</title>
     <!-- page favicon  -->
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
     <!-- added daisyui on the project   -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- added tailwindcss on the project  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <style>
-        h1{
-           
-        }
-    </style>
-</head>
-<body>
-   
+    <!-- font awesome link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!-- header section start here  -->
     <header>
-        <nav>
+      <nav class="">
+        <div
+          class="flex items-center justify-between mx-[60px] m-auto my-[24px]"
+        >
+          <div class="flex items-center gap-2">
+            <img src="./assets/logo.png" alt="" class="w-[50px] h-[50px]" />
+            <p class="font-bold text-2xl text-[#006747]">
+              Emergency<br />Service
+            </p>
+          </div>
 
-        </nav>
+          <div class="flex items-center gap-[20px] sm:gap-[8px]">
+            <div
+              class="flex items-center gap-2 bg-green-200 w-[100px]  p-2 m-2 rounded-[50px] justify-center"
+            >
+              <h4 id="wishlistCount" class="font-bold text-xl">0</h4>
+              <img src="./assets/heart.png" alt="" class="w-[20px] h-[22px]" />
+            </div>
 
+            <div
+              class="flex items-center gap-2 bg-green-200 w-[100px] p-2 m-2 rounded-[50px] justify-center"
+            >
+              <h4 id="coin-balance" class="font-bold">100</h4>
+              <img src="./assets/coin.png" alt="" class="w-[20px] h-[22px]" />
+            </div>
+
+            <div
+              class="flex items-center gap-2 bg-[#00A63E] w-[100px] p-2 m-2 rounded-[50px] justify-center"
+            >
+              <h1 id="copy-count" class="font-bold text-white">0</h1>
+              <p class="font-bold text-white">Copy</p>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- main section start here  -->
-    <main> 
 
-        <!-- banner section start here  -->
-        <section>
+    <main class="bg-[rgb(65_255_107_/0.1)]">
+      <!-- banner section start here  -->
+      <section
+        id="banner"
+        class="flex flex-col gap-[11px] justify-center items-center bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] h-[240px]"
+      >
+        <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px]" />
+        <span class="text-white text-[40px] font-bold">জরুরি সেবা ডিরেক্টরি</span>
+        <p class="text-white text-[20px]">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </section>
 
+      <!-- cart and history section start here  -->
+      <section
+        class="card-container w-11/12 mx-auto grid grid-cols-12  gap-[30px] py-[30px]  "
+      >
+        <section class="number-container col-span-9 gap-[30px] ">
+          <div class="grid grid-cols-3 gap-[30px]">
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px] "
+            >
+              <div class="flex items-center justify-between ">
+                <img
+                  src="./assets/emergency.png"
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span id="favIcon1" class="favIcon  w-[24px] h-[24px]"
+                  ><i class="fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black"
+                  >জাতীয় জরুরি সেবা</span
+                >
+                <span class="text-black">National Emergency</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">999</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >সার্বজনীন</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class=" fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px]"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="./assets/police.png"
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span class="favIcon w-[24px] h-[24px]"
+                  ><i class=" fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black">পুলিশ</span>
+                <span class="text-black">Police</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">999</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >পুলিশ</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class=" fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px]"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="./assets/fire-service.png"
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span class="favIcon w-[24px] h-[24px]"
+                  ><i class=" fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black"
+                  >ফায়ার সার্ভিস</span
+                >
+                <span class="text-black">Fire Service</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">999</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >ফায়ার</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class=" fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px]"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="./assets/ambulance.png "
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span class="favIcon w-[24px] h-[24px]"
+                  ><i class="favIcon fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black"
+                  >অ্যাম্বুলেন্স</span
+                >
+                <span class="text-black">Ambulance</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">1994-999999</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >স্বাস্থ্য</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class=" fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px]"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="./assets/Bangladesh-Railway.png "
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span class="favIcon w-[24px] h-[24px]"
+                  ><i class="fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black"
+                  >বাংলাদেশ রেলওয়ে</span
+                >
+                <span class="text-black">Bangladesh Railway</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">163</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >পরিবহন</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class="  fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px]"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="./assets/brac.png "
+                  alt=""
+                  class="w-[46px] h-[46px]"
+                />
+                <span class="favIcon w-[24px] h-[24px]"
+                  ><i class="fa-regular fa-heart"></i
+                ></span>
+              </div>
+              <div class="flex flex-col mt-4">
+                <span class="card-title font-bold text-[24px] text-black">ব্র্যাক</span>
+                <span class="text-black">Brac</span>
+                <span class="card-number mt-[20px] font-bold text-[32px]">16445</span>
+                <span
+                  class="w-[100px] bg-gray-100 text-gray-700 px-3 py-1 rounded-full mt-3"
+                  >এনজিও</span
+                >
+              </div>
+              <div class="flex gap-[10px] mt-[15px]">
+                <button class="btn-copy btn btn-neutral btn-outline w-[50%]">
+                  <i class="  fa-regular fa-copy"></i>Copy
+                </button>
+                <button class="call-number btn btn-active btn-success w-[50%] text-white">
+                  <i class="fa-solid fa-phone"></i>Call
+                </button>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- cart and history section start here  -->
-        <section>
-
-        </section>
-
+        <aside
+          class="history-container bg-white col-span-3 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]"
+        >
+          <div class="flex justify-between items-center mx-3">
+            <span class="font-[500] text-[20px]"
+              ><i class="fa-solid fa-clock"></i> Call History</span
+            >
+            <div
+              class="flex items-center gap-2 bg-green-600 w-[100px] p-2 m-2 rounded-[50px] justify-center"
+            >
+              <h4 id="clear-btn" class="font-bold text-lg text-white">clear</h4>
+            </div>
+          </div>
+          <div class="" id="call-history">
+            
+          </div>
+        </aside>
+      </section>
     </main>
-    
-    
-
-
 
     <!-- link js with html here  -->
     <script src="./javascript/index.js"></script>
-</body>
+  </body>
 </html>
