@@ -30,7 +30,7 @@
     <header>
       <nav class="">
         <div
-          class="flex items-center justify-between mx-[60px] m-auto my-[24px]"
+          class="flex items-center justify-between mx-2 lg:mx-[60px] m-auto my-[10px] lg:my-[24px]"
         >
           <div class="flex items-center gap-2">
             <img src="./assets/logo.png" alt="" class="w-[50px] h-[50px]" />
@@ -39,23 +39,23 @@
             </p>
           </div>
 
-          <div class="flex items-center gap-[20px] sm:gap-[8px]">
+          <div class="lg:flex items-center gap-1 md:gap-[10px] lg:gap-[20px] ">
             <div
-              class="flex items-center gap-2 bg-green-200 w-[100px]  p-2 m-2 rounded-[50px] justify-center"
+              class="flex items-center gap-2 bg-green-200  lg:w-[100px]  p-2 m-2 rounded-[50px] justify-center"
             >
               <h4 id="wishlistCount" class="font-bold text-xl">0</h4>
               <img src="./assets/heart.png" alt="" class="w-[20px] h-[22px]" />
             </div>
 
             <div
-              class="flex items-center gap-2 bg-green-200 w-[100px] p-2 m-2 rounded-[50px] justify-center"
+              class="flex items-center gap-2 bg-green-200  lg:w-[100px] p-2 m-2 rounded-[50px] justify-center"
             >
               <h4 id="coin-balance" class="font-bold">100</h4>
               <img src="./assets/coin.png" alt="" class="w-[20px] h-[22px]" />
             </div>
 
             <div
-              class="flex items-center gap-2 bg-[#00A63E] w-[100px] p-2 m-2 rounded-[50px] justify-center"
+              class="flex items-center gap-2 bg-[#00A63E]  lg:w-[100px] p-2 m-2 rounded-[50px] justify-center"
             >
               <h1 id="copy-count" class="font-bold text-white">0</h1>
               <p class="font-bold text-white">Copy</p>
@@ -74,8 +74,8 @@
         class="flex flex-col gap-[11px] justify-center items-center bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] h-[240px]"
       >
         <img src="./assets/logo-dark.png" alt="" class="w-[92px] h-[92px]" />
-        <span class="text-white text-[40px] font-bold">জরুরি সেবা ডিরেক্টরি</span>
-        <p class="text-white text-[20px]">
+        <span class="text-white text-[25px] lg:text-[40px] font-semibold lg:font-bold">জরুরি সেবা ডিরেক্টরি</span>
+        <p class="text-white text-[14px] text-center lg:text-[20px]">
           Government Emergency Services at Your Fingertip – A Project by
           Government of the People’s Republic of Bangladesh
         </p>
@@ -83,10 +83,10 @@
 
       <!-- cart and history section start here  -->
       <section
-        class="card-container w-11/12 mx-auto grid grid-cols-12  gap-[30px] py-[30px]  "
+        class="card-container md:w-11/12 w-full mx-auto grid grid-cols-12  gap-[30px] py-[30px]  "
       >
-        <section class="number-container col-span-9 gap-[30px] ">
-          <div class="grid grid-cols-3 gap-[30px]">
+        <section class="number-container col-span-12 md:col-span-9  gap-[30px] ">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
             <div
               class="w-[436px] h-[360px] bg-white rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] p-[32px] "
             >
@@ -290,7 +290,7 @@
         </section>
 
         <aside
-          class="history-container bg-white col-span-3 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]"
+          class="history-container bg-white col-span-12 md:col-span-3 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)]"
         >
           <div class="flex justify-between items-center mx-3">
             <span class="font-[500] text-[20px]"
@@ -303,6 +303,7 @@
             </div>
           </div>
           <div class="" id="call-history">
+            
             
           </div>
         </aside>
