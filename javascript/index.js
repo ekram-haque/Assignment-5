@@ -108,19 +108,23 @@ for( const btnCopy of btnCopyS){
    
     
     btnCopy.addEventListener("click", function(){
-        
-        for(let i = 0;i<number.length;i++){
 
-                 navigator.clipboard.writeText(number[i])
+
+        const clickedButton = event.target;
+         const card = clickedButton.closest('.card');
+        const numberEl = card.querySelector('.card-number');
+        const numberToCopy = numberEl.textContent;
+
+           navigator.clipboard.writeText(numberToCopy)
                 .then(() => {
              alert("Copied to clipboard!");
-            console.log("Copied Number:", number[i]); 
+            console.log("Copied Number:", numberToCopy); 
 
         })
         .catch(err => {
             console.error("Copy failed:", err);
         });
-        }
+        
 
    
     copy++;
