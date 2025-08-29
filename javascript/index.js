@@ -70,7 +70,7 @@ for(let i = 0; i < cardCalls.length; i++){
                     </div>
             </div>
             `;
-callHistory.append(callerDiv);
+        callHistory.append(callerDiv);
         }else{
 
             alert("not have sufficient coin to make a call")
